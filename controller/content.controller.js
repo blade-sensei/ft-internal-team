@@ -8,6 +8,7 @@ router.get('', async (req, res) => {
     const article = contentModel.getArticle();
     article.publishedData = getDataFormat(article.publishedDate);
     article.byline = article.byline.substring(3);
+    // todo split content on paragraphs to get newlines maybe we can use split by pattern '. '
     res.render('content.view.html', {article})
 });
 
