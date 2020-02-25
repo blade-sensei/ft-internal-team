@@ -4,16 +4,17 @@ const express = require('express');
 const contentController = require('./controller/content.controller');
 const indexController = require('./controller/index.controller');
 const config = require('./config');
-//const cors = require('./middlewares/cors');
+const mustacheExpress = require('mustache-express');
 
 const app = express();
 
 module.exports = app;
 
-//app.use(bodyParser.json());
-//app.use(cookieParser());
-
-// enable cross origin
+// set template engine
+app.engine('html', mustacheExpress());
+ 
+app.set('view engine', 'html');
+app.set('views', __dirname + '/views');
 
 // adding routes modules
 app.use('/', indexController);
