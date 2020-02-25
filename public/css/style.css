@@ -10,3 +10,7 @@ body {
 .article-head {
     background-color: rgb(250, 234, 220);
 }
+
+.search-form-container {
+    background-color: brown;
+}
