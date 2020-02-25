@@ -12,9 +12,11 @@ module.exports = app;
 
 // set template engine
 app.engine('html', mustacheExpress());
- 
-app.set('view engine', 'html');
+ app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
+
+// serve static files
+app.use(express.static('public'));
 
 // adding routes modules
 app.use('/', indexController);
