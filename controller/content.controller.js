@@ -4,7 +4,8 @@ const router = express.Router();
 const contentModel = require('../models/content.model');
 
 
-router.get('', async (req, res) => {
+router.get('/:id?', async (req, res) => {
+    const articleAddOnURL = req.params.id;
     const article = contentModel.getArticle();
     article.publishedData = getDataFormat(article.publishedDate);
     article.byline = article.byline.substring(3);
