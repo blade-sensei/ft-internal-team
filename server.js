@@ -7,7 +7,6 @@ const config = require('./config');
 //const cors = require('./middlewares/cors');
 
 const app = express();
-app.set('secret_key', config.auth.key);
 
 module.exports = app;
 
