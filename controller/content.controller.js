@@ -6,7 +6,8 @@ const contentModel = require('../models/content.model');
 
 router.get('', async (req, res) => {
     const article = contentModel.getArticle();
-    res.send('content page');
+    
+    res.render('content.view.html', {article: 'content article'})
 });
 
 module.exports = router;
