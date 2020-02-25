@@ -3,6 +3,7 @@ const express = require('express');
 //const cookieParser = require('cookie-parser');
 const contentController = require('./controller/content.controller');
 const indexController = require('./controller/index.controller');
+const searchController = require('./controller/search.controller');
 const config = require('./config');
 const mustacheExpress = require('mustache-express');
 
@@ -21,6 +22,7 @@ app.use(express.static('public'));
 // adding routes modules
 app.use('/', indexController);
 app.use('/content', contentController);
+app.use('/search', searchController);
 app.use((req, res) => {
   res.send(404);
 });
