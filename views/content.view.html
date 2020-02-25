@@ -1,7 +1,21 @@
 {{> index.view }}
 <div class="article-head">
-    {{ article.title }}
+    <span>
+        {{ article.title }}
+    </span>
 </div>
 <section class="article-content">
-    {{ article }}
+    <span class="article-byline">
+        {{ article.byline }}
+    </span>
+    <span class="article-data">
+        <time datatime="{{ article.publishedData }}">
+            {{ article.publishedData }}
+        </time>
+    </span>
+    <div class="article-body">
+        <p>
+        {{ article.bodyXML }}
+        </p>
+    </div>
 </section>
