@@ -39,15 +39,26 @@ function injectFormatedData(articles) {
     })
 }
 
+function isFirst(currentPage) {
+    return currentPage === 1;
+}
+
+function isLast(currentPage, maxPage) {
+    return currentPage === maxPage;
+}
+
 function getStatusPage(currentPage, maxPage) {
     const next = currentPage < maxPage ? currentPage + 1: maxPage;
     const previous = currentPage > 1 ? currentPage - 1 : 1;
+    const isFirstPage = isFirst(currentPage);
+    const isLastPage = isLast(currentPage, maxPage);
     return {
         current: currentPage,
         next,
-        previous
+        previous,
+        isFirstPage,
+        isLastPage,
     }
 }
-
 
 module.exports = router;
