@@ -8,6 +8,12 @@ function getDataFormat(dateString) {
     return fullDateFormat;
 }
 
+function getNumberOfPages(totalArticles, maxArticlesByPage) {
+    const pages = totalArticles / maxArticlesByPage;
+    return Math.ceil(pages);
+}
+
 module.exports = {
     getDataFormat,
+    getNumberOfPages,
 }
