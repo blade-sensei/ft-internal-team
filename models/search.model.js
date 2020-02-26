@@ -6,15 +6,17 @@ async function searchByKeyWord(keywords, { maxResults, page }) {
         'X-Api-Key': config.token,
         'Content-Type': 'application/json'
     };
+    const offset = (page - 1) * maxResults;
     const body = {
         queryString: "Donald AND usa",
         resultContext : {
-            aspects :['images','lifecycle','location','master','nature','summary','title']
+            aspects :['images','lifecycle','location','master','nature','summary','title'],
+            maxResults,
+            offset
        },
-       resultContext : {
-        "maxResults" : maxResults,
-        "offset" : page * maxResults,
-     }
+       queryContext : {
+        curations : ["ARTICLES"]
+     },
     };
     const url = 'http://api.ft.com/content/search/v1';
     const searchResults = await axios.post(url, body, { headers})

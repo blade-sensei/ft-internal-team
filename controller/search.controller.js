@@ -9,7 +9,7 @@ const MAX_ARTICLES_BY_PAGE = 25;
 
 router.get('/', async (req, res) => {
     const queryKeyWord = req.query.q;
-    const currentPageAsked = req.query.page || 1;
+    const currentPageAsked = Number(req.query.page) || 1;
     const searchOptions = {
         maxResults: MAX_ARTICLES_BY_PAGE,
         page: currentPageAsked,
