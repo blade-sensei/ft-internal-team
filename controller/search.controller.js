@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
     }
     const searchResults = await searchModel.searchByKeyWord(queryKeyWord, searchOptions);
     let articles =  searchResults.results;
-    articles = injectFormatedData(articles);
+    articles = addFormatedData(articles);
     const totalArticles = searchResults.indexCount;
     const pagesNumber = utils.getNumberOfPages(totalArticles, MAX_ARTICLES_BY_PAGE);
     const statusPage = getStatusPage(currentPageAsked, pagesNumber);
@@ -32,7 +32,7 @@ router.get('/', async (req, res) => {
     });
 });
 
-function injectFormatedData(articles) {
+function addFormatedData(articles) {
     return articles.map(article => {
         article.date = utils.getDataFormat(article.lifecycle.lastPublishDateTime);
         return article;

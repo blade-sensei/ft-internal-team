@@ -14,9 +14,11 @@
         </time>
     </span>
     <div class="article-body">
+        {{ #article.paragraphs }}
         <p>
-        {{ article.bodyXML }}
+            {{ . }}
         </p>
+        {{ /article.paragraphs }}
     </div>
 </section>
 
