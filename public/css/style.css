@@ -41,11 +41,3 @@ body {
   display: inline-block;
   font-size: 10px;
 }
-
-.hidden {
-    display: none;
-}
-
-.display {
-    display: block;
-}

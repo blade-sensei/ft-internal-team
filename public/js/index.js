@@ -14,10 +14,10 @@ const searchBtnToggle = document.querySelector('#search-toggle-id');
 searchBtnToggle.addEventListener('click', () => {
    const searchFormContainer = document.querySelector('.search-box');
    const display = window.getComputedStyle(searchFormContainer).display;
-   const className = getDisplayClassName(display);
-   searchFormContainer.classList.add(className);
+   const displayToggled = getToggleDisplay(display);
+   searchFormContainer.style.display = displayToggled;
 })
 
-function getDisplayClassName(currentDisplay) {
-    return currentDisplay === 'none' ? 'display': 'hidden'
+function getToggleDisplay(currentDisplay) {
+    return currentDisplay === 'none' ? 'block': 'none'
 }
