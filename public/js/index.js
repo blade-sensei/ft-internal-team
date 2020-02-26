@@ -27,9 +27,17 @@ function setHandleSearchButton(searchBtn) {
     searchBtn.addEventListener('click', () => {
         const parent = searchBtn.parentElement;
         const searchInput = parent.querySelector('.search-input');
-        const searchText = searchInput.value;
+        let searchText = searchInput.value;
+        searchText = removeExtraSpaces(searchText);
         let searchKeyWords = searchText.split(' ');
         searchKeyWords = searchKeyWords.join('+');
         window.location.href = `http://localhost:3000/search?q=` + searchKeyWords; 
     })
 }
+
+function removeExtraSpaces(text) {
+    const textNoSideSpaces = text.trim();
+    const textNoExtraSpaces = textNoSideSpaces.replace(/\s+/g, " ");
+    return textNoExtraSpaces;
+}
+
