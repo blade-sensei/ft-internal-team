@@ -1,4 +1,7 @@
-{{> index.view }}
+{{> header }}
+<div class="search-form-container results">
+    {{ >search.view }}
+</div>
 <div class="search-list-container">
     <span>
         Viewing results 1-{{ maxArticlePage }} of {{ totalArticles }}
@@ -45,3 +48,5 @@
     </a>
     {{/statusPage.isLastPage}}
 </div>
+
+{{> footer }}
