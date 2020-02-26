@@ -8,7 +8,7 @@ async function searchByKeyWord(keywords, { maxResults, page }) {
     };
     const offset = (page - 1) * maxResults;
     const body = {
-        queryString: "Donald AND usa",
+        queryString: keywords,
         resultContext : {
             aspects :['images','lifecycle','location','master','nature','summary','title'],
             maxResults,
