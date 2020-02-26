@@ -7,7 +7,7 @@ const searchFormDisplayStatus = {
 }
 const searchBtnToggle = document.querySelector('#search-toggle-id');
 searchBtnToggle.addEventListener('click', () => {
-   const searchFormContainer = document.querySelector('.search-box');
+   const searchFormContainer = document.querySelector('.header-search-section');
    const display = window.getComputedStyle(searchFormContainer).display;
    const displayToggled = getToggleDisplay(display);
    searchFormContainer.style.display = displayToggled;

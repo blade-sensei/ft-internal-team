@@ -1,5 +1,6 @@
 body {
     background-color: rgb(255, 241, 229);
+    font-family: FinancierDisplayWeb, serif;
 }
 
 .header-container {
@@ -9,10 +10,6 @@ body {
 
 .article-head {
     background-color: rgb(250, 234, 220);
-}
-
-.search-form-container {
-    background-color: brown;
 }
 
 .link-article {
@@ -42,6 +39,11 @@ body {
   font-size: 10px;
 }
 
-.search-box {
+.header-search-section {
     display: none;
 }
+
+.brand-logo-img {
+    width: 50px;
+    height: auto;
+  }

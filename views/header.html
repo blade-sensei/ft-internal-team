@@ -7,18 +7,42 @@
     
 </head>
 
-<header class="header-container">
-    <div class="search"></div>
-    <span class="title"> FINANCIAL TIMES </span>
-    <div class="search-input"></div>
+<header class="o-header o-header--simple" data-o-component="o-header">
+	<div class="o-header__row o-header__top">
+		<div class="o-header__container">
+			<div class="o-header__top-wrapper">
+				<div class="o-header__top-column o-header__top-column--left">
+					<div class="search">
+                        <div class="search-icon-container">
+                            <a class="btn-search-bar" id="search-toggle-id">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+				</div>
+
+				<div class="o-header__top-column o-header__top-column--center">
+					<!--<div class="o-header__top-takeover"></div>-->
+					<a class="o-header__top-logo" href="/" title="Go to Financial Times homepage">
+						<span class="o-header__visually-hidden">Financial Times</span>
+					</a>
+				</div>
+
+				<div class="o-header__top-column o-header__top-column--right">
+					<!--<div class="o-header__top-takeover"></div>-->
+					<a class="o-header__top-link o-header__top-link--myft" href="/myft" aria-label="My F T">
+						<span class="o-header__visually-hidden">myFT</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <div class="header-search-section">
+        {{ >search.view }}
+    </div>
+    
+
 </header>
-<div class="search-icon-container">
-    <a class="btn-search-bar" id="search-toggle-id">
-        <i class="fas fa-search"></i>
-    </a>
-</div>
-<div class="search-box">
-    {{ >search.view }}
-</div>
 
 <body>

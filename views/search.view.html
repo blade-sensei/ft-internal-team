@@ -1,6 +1,14 @@
 <form role="search" class="search-form-container">
-    <input type="text" id="search-input-id" class="search-input" value="{{ queryKeyWord }}">
-    <button id="search-btn-id" class="search-btn" type="button">
-        Search
-    </button>
+    <label class="o-forms-field o-forms-field--optional">
+		
+
+		<span class="o-forms-input o-forms-input--text o-forms-input--suffix">
+            <input type="text" name="text" id="search-input-id" value="{{ queryKeyWord }}" class="search-input">
+
+                <button id="search-btn-id" class="search-head__form-submit o-buttons o-buttons--primary o-buttons--big o-buttons-icon o-buttons-icon--search o-buttons-icon--icon-only">
+                    <span class="o-buttons-icon__label">Search</span>
+                </button>
+		</span>
+	
+	</label>
 </form>
