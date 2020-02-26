@@ -4,13 +4,20 @@
         Viewing results 1-{{ maxArticlePage }} of {{ totalArticles }}
     </span>
 {{#results}}
+
 <div class="article-teaser">
-    <h2>
-        {{ title.title }}
-    </h2>
-    <p class="article-resume">
-        {{ summary.excerpt }}
-    </p>
+    <a href="content/{{id}}" class="link-article">
+        <h2 class="article-title">
+            {{ title.title }}
+        </h2>
+    </a>
+    <a href="content/{{id}}" class="link-article">
+        <p class="article-resume">
+            <span>
+                {{ summary.excerpt }}
+            </span>
+        </p>
+    </a>
     <span class="article-data">
         <time datatime="{{ article.publishedData }}">
             {{ date }}
@@ -24,9 +31,7 @@
     {{#statusPage.isFirstPage}}
     {{/statusPage.isFirstPage}}
     {{^statusPage.isFirstPage}}
-    <a class="btn previous-page" href="?q={{queryKeyWord}}&page={{statusPage.previous}}">
-        &lt; PREVIOUS
-    </a>
+    <a class="btn previous-page" href="?q={{queryKeyWord}}&page={{statusPage.previous}}">&lt; PREVIOUS</a>
     {{/statusPage.isFirstPage}}
 
     <span class="pagination-number">

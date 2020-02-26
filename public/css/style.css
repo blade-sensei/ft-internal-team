@@ -14,3 +14,30 @@ body {
 .search-form-container {
     background-color: brown;
 }
+
+.link-article {
+    text-decoration: none;
+}
+
+.article-title {
+    color: black;
+}
+
+.article-resume {
+    color: rgb(102, 102, 102);
+}
+
+.link-article:hover {
+    text-decoration: none;
+}
+
+.btn {
+    background-color: rgb(13, 118, 128);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+}
