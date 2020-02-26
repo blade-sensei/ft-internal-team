@@ -4,13 +4,24 @@ const router = express.Router();
 const searchModel = require('../models/search.model');
 const utils = require('../helpers/utils');
 
+const MAX_ARTICLES_BY_PAGE = 25;
 
 
 router.get('/', async (req, res) => {
     const queryKeyWord = req.query.q;
-    let searchResults = await searchModel.searchByKeyWord(queryKeyWord);
-    searchResults = injectFormatedData(searchResults);
-    res.render('search-list.view.html', { results: searchResults });
+    const searchResults = await searchModel.searchByKeyWord(queryKeyWord);
+    let articles =  searchResults.results;
+    articles = injectFormatedData(articles);
+    const totalArticles = searchResults.indexCount;
+    const pages = utils.getNumberOfPages(totalArticles, MAX_ARTICLES_BY_PAGE);
+    res.render('search-list.view.html',
+    {
+        pages,
+        totalArticles,
+        results: searchResults.results,
+        maxArticlePage: MAX_ARTICLES_BY_PAGE
+        
+    });
 });
 
 function injectFormatedData(articles) {
@@ -19,5 +30,6 @@ function injectFormatedData(articles) {
         return article;
     })
 }
+
 
 module.exports = router;

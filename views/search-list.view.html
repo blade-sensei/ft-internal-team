@@ -1,5 +1,8 @@
-list 
+{{> index.view }}
 <div class="search-list-container">
+    <span>
+        Viewing results 1-{{ maxArticlePage }} of {{ totalArticles }}
+    </span>
 {{#results}}
 <div class="article-teaser">
     <h2>
@@ -15,4 +18,13 @@ list
     </span>
 </div>  
 {{/results}}
+</div>
+
+<div class="pagination-container">
+    <span class="pagination-number">
+
+    </span>
+    <button type="button" class="btn next-page">
+        NEXT >
+    </button>
 </div>

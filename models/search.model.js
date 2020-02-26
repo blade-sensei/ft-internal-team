@@ -14,7 +14,7 @@ async function searchByKeyWord(keywords, options) {
     };
     const url = 'http://api.ft.com/content/search/v1';
     const searchResults = await axios.post(url, body, { headers})
-    return searchResults.data.results[0].results;
+    return searchResults.data.results[0];
 }
 
 module.exports = {
