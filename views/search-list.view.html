@@ -8,6 +8,11 @@ list
     <p class="article-resume">
         {{ summary.excerpt }}
     </p>
+    <span class="article-data">
+        <time datatime="{{ article.publishedData }}">
+            {{ date }}
+        </time>
+    </span>
 </div>  
 {{/results}}
 </div>
