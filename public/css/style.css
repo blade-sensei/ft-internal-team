@@ -41,3 +41,7 @@ body {
   display: inline-block;
   font-size: 10px;
 }
+
+.search-box {
+    display: none;
+}
