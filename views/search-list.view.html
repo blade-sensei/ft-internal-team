@@ -21,10 +21,13 @@
 </div>
 
 <div class="pagination-container">
+    <a class="btn previous-page">
+        &lt; PREVIOUS
+    </a>
     <span class="pagination-number">
-
+        Page {{ statusPage.current }} of {{ pagesNumber }}
     </span>
-    <button type="button" class="btn next-page">
-        NEXT >
-    </button>
+    <a class="btn next-page" href="?q={{queryKeyWord}}&page={{statusPage.next}}">
+        NEXT &gt;
+    </a>
 </div>
