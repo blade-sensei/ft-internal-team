@@ -12,11 +12,6 @@ footer {
     width: 100%;
 }
 
-.header-container {
-    height: 100px;
-    background-color: rgb(255, 241, 229);
-}
-
 .link-article {
     text-decoration: none;
 }
@@ -54,7 +49,7 @@ footer {
 }
 
 .article-content-container {
-    padding: 40px 0;
+    padding: 40px 5%;
 }
 
 .article-info {
@@ -99,7 +94,7 @@ footer {
     width: 50px;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .search-list-container {
         padding-left: 5%;
         padding-right: 30%;
