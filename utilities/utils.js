@@ -4,7 +4,7 @@ function getDataFormat(dateString) {
     const month = formatter.format(dateFormat).toUpperCase();
     const year = dateFormat.getFullYear();
     const date = dateFormat.getDate();
-    const fullDateFormat = ` ${month} ${date} ${year}`;
+    const fullDateFormat = `${month} ${date} ${year}`;
     return fullDateFormat;
 }
 
