@@ -52,7 +52,7 @@
         {{#statusPage.isFirstPage}}
         {{/statusPage.isFirstPage}}
         {{^statusPage.isFirstPage}}
-        <a href="?q={{queryKeyWord}}&page={{statusPage.previous}}" class="btn previous-page o-buttons o-buttons--secondary o-buttons-icon o-buttons-icon--arrow-left o-buttons-icon--icon-only">
+        <a href="?q={{queryKeyWord}}&page={{statusPage.previous}}" class="o-buttons o-buttons--secondary o-buttons--big o-buttons-icon o-buttons-icon--arrow-left o-buttons-icon--icon-only">
             <span class="o-buttons-icon__label">Go forward</span>
         </a>
         {{/statusPage.isFirstPage}}
@@ -63,7 +63,7 @@
         {{#statusPage.isLastPage}}
         {{/statusPage.isLastPage}}
         {{^statusPage.isLastPage}}
-        <a href="?q={{queryKeyWord}}&page={{statusPage.next}}" class="btn next-page o-buttons o-buttons--secondary o-buttons--big o-buttons-icon o-buttons-icon--arrow-right o-buttons-icon--icon-only">
+        <a href="?q={{queryKeyWord}}&page={{statusPage.next}}" class="o-buttons o-buttons--secondary o-buttons--big o-buttons-icon o-buttons-icon--arrow-right o-buttons-icon--icon-only">
             <span class="o-buttons-icon__label">Go forward</span>
         </a>
         {{/statusPage.isLastPage}}
