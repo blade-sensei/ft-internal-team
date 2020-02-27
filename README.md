@@ -2,13 +2,13 @@
 
 ## Responsive
 
-Media queries were used to set responsive design.
+- Media queries were used to set responsive design.
 
-We only use a basic responsive screen.
+- We only use a basic responsive screen.
 
-Supports tablets screen size and over, so over 728 pixel of width screen we change our layout.
+- Supports tablets screen size and over, so over 728 pixel of width screen we change our layout.
 
-Origami components were added and they support responsive too.
+- Origami components were added and they support responsive too.
 
 ### Mobile layout 
 
@@ -33,6 +33,22 @@ Mobile version
 
 ### Table - Desktop +
 ![mobile version](./images/desktop-screen.png)
+
+## Accesibility
+
+- To test our acessibility we use Chrome audit dev tools. This a first way to test.
+- Semantic tags were used and lang attribute lang.
+  ```html
+  <article>, <header>, <title>
+  ```
+
+- Keyboard navigation works pretty well.
+
+### Chrome audit results:
+
+
+![audit-access](images/audit-accessibility.png)
+
 
 
 ## Imp
