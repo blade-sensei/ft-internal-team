@@ -61,3 +61,7 @@ body {
     border-top: solid rgb(204, 193, 183) 1px;
     padding-top: 20px;
 }
+
+.btn-search-bar {
+    cursor: pointer;
+} 
