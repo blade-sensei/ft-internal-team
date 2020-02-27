@@ -95,6 +95,10 @@ footer {
     margin: 0 10px;
 }
 
+.o-icons-icon--search {
+    width: 50px;
+}
+
 @media (min-width: 768px) {
     .search-list-container {
         padding-left: 5%;
