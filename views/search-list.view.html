@@ -1,52 +1,60 @@
 {{> header }}
-<div class="search-form-container results">
-    {{ >search.view }}
-</div>
 <div class="search-list-container">
-    <span>
-        Viewing results 1-{{ maxArticlePage }} of {{ totalArticles }}
+    <span class="title-search-page">
+        Search Results
     </span>
-{{#results}}
+    <div class="search-form-container results">
+        {{ >search.view }}
+    </div>
+    <div class="search-list-container">
+        <div class="o-teaser-collection ">
+            <h2 class="o-teaser-collection__heading">
+                Viewing results 1-{{ maxArticlePage }} of {{ totalArticles }}
+            </h2>        
+        </div>
+    </div>
+    {{#results}}
+    <div class="article-teaser">
+        <a href="content/{{id}}" class="link-article">
+            <h2 class="article-title">
+                {{ title.title }}
+            </h2>
+        </a>
+        <a href="content/{{id}}" class="link-article">
+            <p class="article-resume">
+                <span>
+                    {{ summary.excerpt }}
+                </span>
+            </p>
+        </a>
+        <span class="article-data">
+            <time datatime="{{ article.publishedData }}">
+                {{ date }}
+            </time>
+        </span>
+    </div>  
+    {{/results}}
+    </div>
 
-<div class="article-teaser">
-    <a href="content/{{id}}" class="link-article">
-        <h2 class="article-title">
-            {{ title.title }}
-        </h2>
-    </a>
-    <a href="content/{{id}}" class="link-article">
-        <p class="article-resume">
-            <span>
-                {{ summary.excerpt }}
-            </span>
-        </p>
-    </a>
-    <span class="article-data">
-        <time datatime="{{ article.publishedData }}">
-            {{ date }}
-        </time>
-    </span>
-</div>  
-{{/results}}
-</div>
+    <div class="pagination-container">
+        {{#statusPage.isFirstPage}}
+        {{/statusPage.isFirstPage}}
+        {{^statusPage.isFirstPage}}
+        <a class="btn previous-page" href="?q={{queryKeyWord}}&page={{statusPage.previous}}">&lt; PREVIOUS</a>
+        {{/statusPage.isFirstPage}}
 
-<div class="pagination-container">
-    {{#statusPage.isFirstPage}}
-    {{/statusPage.isFirstPage}}
-    {{^statusPage.isFirstPage}}
-    <a class="btn previous-page" href="?q={{queryKeyWord}}&page={{statusPage.previous}}">&lt; PREVIOUS</a>
-    {{/statusPage.isFirstPage}}
+        <span class="pagination-number">
+            Page {{ statusPage.current }} of {{ pagesNumber }}
+        </span>
+        {{#statusPage.isLastPage}}
+        {{/statusPage.isLastPage}}
+        {{^statusPage.isLastPage}}
+        <a class="btn next-page" href="?q={{queryKeyWord}}&page={{statusPage.next}}">
+            NEXT &gt;
+        </a>
+        {{/statusPage.isLastPage}}
+    </div>
 
-    <span class="pagination-number">
-        Page {{ statusPage.current }} of {{ pagesNumber }}
-    </span>
-    {{#statusPage.isLastPage}}
-    {{/statusPage.isLastPage}}
-    {{^statusPage.isLastPage}}
-    <a class="btn next-page" href="?q={{queryKeyWord}}&page={{statusPage.next}}">
-        NEXT &gt;
-    </a>
-    {{/statusPage.isLastPage}}
 </div>
 
 {{> footer }}
