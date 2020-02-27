@@ -2,6 +2,14 @@ body {
     background-color: rgb(255, 241, 229);
     font-family: FinancierDisplayWeb, serif;
     color: rgb(51, 48, 46);
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+footer {
+    left: 0;
+    width: 100%;
 }
 
 .header-container {
