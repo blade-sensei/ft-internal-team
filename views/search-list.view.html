@@ -9,7 +9,7 @@
     <div class="search-list-container">
         <div class="o-teaser-collection ">
             <h2 class="o-teaser-collection__heading">
-                Viewing results 1-{{ maxArticlePage }} of {{ totalArticles }}
+                Viewing results {{ offsetPage.min }}-{{ offsetPage.max }} of {{ totalArticles }}
             </h2>        
         </div>
     </div>
@@ -44,7 +44,9 @@
         {{#statusPage.isFirstPage}}
         {{/statusPage.isFirstPage}}
         {{^statusPage.isFirstPage}}
-        <a class="btn previous-page" href="?q={{queryKeyWord}}&page={{statusPage.previous}}">&lt; PREVIOUS</a>
+        <a href="?q={{queryKeyWord}}&page={{statusPage.previous}}" class="btn previous-page o-buttons o-buttons--secondary o-buttons-icon o-buttons-icon--arrow-left o-buttons-icon--icon-only">
+            <span class="o-buttons-icon__label">Go forward</span>
+        </a>
         {{/statusPage.isFirstPage}}
 
         <span class="pagination-number">
@@ -53,8 +55,8 @@
         {{#statusPage.isLastPage}}
         {{/statusPage.isLastPage}}
         {{^statusPage.isLastPage}}
-        <a class="btn next-page" href="?q={{queryKeyWord}}&page={{statusPage.next}}">
-            NEXT &gt;
+        <a href="?q={{queryKeyWord}}&page={{statusPage.next}}" class="btn next-page o-buttons o-buttons--secondary o-buttons-icon o-buttons-icon--arrow-right o-buttons-icon--icon-only">
+            <span class="o-buttons-icon__label">Go forward</span>
         </a>
         {{/statusPage.isLastPage}}
     </div>

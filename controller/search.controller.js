@@ -14,6 +14,8 @@ router.get('/', async (req, res) => {
         maxResults: MAX_ARTICLES_BY_PAGE,
         page: currentPageAsked,
     }
+    
+    const offsetPage = getOffset(currentPageAsked, MAX_ARTICLES_BY_PAGE);
     const searchResults = await searchModel.searchByKeyWord(queryKeyWord, searchOptions);
     let articles =  searchResults.results;
     articles = addFormatedData(articles);
@@ -22,6 +24,7 @@ router.get('/', async (req, res) => {
     const statusPage = getStatusPage(currentPageAsked, pagesNumber);
     res.render('search-list.view.html',
     {
+        offsetPage,
         pagesNumber,
         totalArticles,
         statusPage,
@@ -58,6 +61,15 @@ function getStatusPage(currentPage, maxPage) {
         previous,
         isFirstPage,
         isLastPage,
+    }
+}
+
+function getOffset(page, maxArticlesByPage) {
+    const maximumOffset = page * maxArticlesByPage;
+    const minimumOffset = maximumOffset - (maxArticlesByPage - 1);
+    return {
+        max: maximumOffset,
+        min:  minimumOffset,
     }
 }
 

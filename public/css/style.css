@@ -75,3 +75,14 @@ body {
 .search-list-container {
     margin-top: 20px;
 }
+
+.pagination-container {
+    font-family: MetricWeb,sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+}
+
+.pagination-number {
+    margin: 0 10px;
+}
