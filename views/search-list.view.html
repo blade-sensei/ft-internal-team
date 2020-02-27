@@ -14,24 +14,28 @@
         </div>
     </div>
     {{#results}}
-    <div class="article-teaser">
-        <a href="content/{{id}}" class="link-article">
-            <h2 class="article-title">
-                {{ title.title }}
-            </h2>
-        </a>
-        <a href="content/{{id}}" class="link-article">
-            <p class="article-resume">
-                <span>
-                    {{ summary.excerpt }}
-                </span>
-            </p>
-        </a>
-        <span class="article-data">
-            <time datatime="{{ article.publishedData }}">
-                {{ date }}
-            </time>
-        </span>
+    <div class="article-teaser o-teaser o-teaser--small">
+        <div class="o-teaser__content">
+            <div class="o-teaser__meta">
+                <a href="content/{{id}}" class="link-article">
+                    <h2 class="article-title o-teaser__heading">
+                        {{ title.title }}
+                    </h2>
+                </a>
+            </div>
+            <a href="content/{{id}}" class="link-article">
+                <p class="article-resume">
+                    <p class="o-teaser__standfirst">
+                        {{ summary.excerpt }}
+                    </p>
+                </p>
+            </a>
+            <span class="article-data">
+                <time datatime="{{ article.publishedData }}">
+                    {{ date }}
+                </time>
+            </span>
+        </div>
     </div>  
     {{/results}}
     </div>
