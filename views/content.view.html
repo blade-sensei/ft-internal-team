@@ -1,25 +1,29 @@
 {{> header }}
-<div class="article-head">
-    <span>
-        {{ article.title }}
-    </span>
-</div>
-<section class="article-content">
-    <span class="article-byline">
-        {{ article.byline }}
-    </span>
-    <span class="article-data">
-        <time datatime="{{ article.publishedData }}">
-            {{ article.publishedData }}
-        </time>
-    </span>
-    <div class="article-body">
-        {{ #article.paragraphs }}
-        <p>
-            {{ . }}
-        </p>
-        {{ /article.paragraphs }}
+<div class="article-content-container">
+    <div class="article-head">
+        <span class="o-editorial-typography-heading-level-1">
+            {{ article.title }}
+        </span>
     </div>
-</section>
+    <article class="article-content">
+        <div class="article-info">
+            <span class="article-byline">            
+                {{ article.byline }}
+            </span>
+            <span class="article-data">
+                <time  class="o-editorial-typography-timestamp" datatime="{{ article.publishedData }}">
+                    {{ article.publishedData }}
+                </time>
+            </span>
+        </div>
+        <div class="article-body o-editorial-typography-body">
+            {{ #article.paragraphs }}
+            <p>
+                {{ . }}
+            </p>
+            {{ /article.paragraphs }}
+        </div>
+    </article>
 
+</div>
 {{> footer}}

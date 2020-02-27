@@ -1,15 +1,12 @@
 body {
     background-color: rgb(255, 241, 229);
     font-family: FinancierDisplayWeb, serif;
+    color: rgb(51, 48, 46);
 }
 
 .header-container {
     height: 100px;
     background-color: rgb(255, 241, 229);
-}
-
-.article-head {
-    background-color: rgb(250, 234, 220);
 }
 
 .link-article {
@@ -46,4 +43,21 @@ body {
 .brand-logo-img {
     width: 50px;
     height: auto;
-  }
+}
+
+.article-content-container {
+    padding-top: 40px;
+}
+
+.article-info {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: MetricWeb,sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.article-body {
+    border-top: solid rgb(204, 193, 183) 1px;
+    padding-top: 20px;
+}
