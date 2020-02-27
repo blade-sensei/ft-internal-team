@@ -1,5 +1,39 @@
 # Documentation
 
+## Responsive
+
+Media queries were used to set responsive design.
+
+We only use a basic responsive screen.
+
+Supports tablets screen size and over, so over 728 pixel of width screen we change our layout.
+
+Origami components were added and they support responsive too.
+
+### Mobile layout 
+
+Lateral espaces were added beetwen body content and screen extremes, to get a result like this: 
+
+
+```| <--> | BODY | <-------> |```
+
+
+### CSS code
+```css
+
+// see style.css file
+
+@media screen and (min-width: 768px) {}
+```
+
+Mobile version
+
+### Mobile screen
+![mobile version](./images/mobile-screen.png)
+
+### Table - Desktop +
+![mobile version](./images/desktop-screen.png)
+
 
 ## Imp
 
