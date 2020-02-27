@@ -14,7 +14,7 @@
         </div>
     </div>
     {{#results}}
-    <div class="article-teaser o-teaser o-teaser--small">
+    <div class="article-teaser o-teaser o-teaser--small o-teaser--has-image">
         <div class="o-teaser__content">
             <div class="o-teaser__meta">
                 <a href="content/{{id}}" class="link-article">
@@ -35,6 +35,14 @@
                     {{ date }}
                 </time>
             </span>
+        </div>
+        <div class="o-teaser__image-container">
+            <div class="o-teaser__image-placeholder image-placeholder">
+                {{#images}}
+                    <img src="{{url}}" class="o-teaser__image" alt="demo image">
+                {{/images}}
+                
+            </div>
         </div>
     </div>  
     {{/results}}

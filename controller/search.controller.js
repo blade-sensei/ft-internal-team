@@ -37,6 +37,7 @@ router.get('/', async (req, res) => {
 
 function addFormatedData(articles) {
     return articles.map(article => {
+        console.log(article.images[0].url);
         article.date = utils.getDataFormat(article.lifecycle.lastPublishDateTime);
         return article;
     })
