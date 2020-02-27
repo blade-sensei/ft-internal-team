@@ -1,10 +1,6 @@
 const searchBtns = document.querySelectorAll('.search-btn');
 setClickHandlerSearchButton(searchBtns);
 
-
-const searchFormDisplayStatus = {
-
-}
 const searchBtnToggle = document.querySelector('#search-toggle-id');
 searchBtnToggle.addEventListener('click', () => {
    const searchFormContainer = document.querySelector('.header-search-section');
