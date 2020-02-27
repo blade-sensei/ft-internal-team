@@ -1,5 +1,5 @@
 const test = require('ava');
-const utils = require('./utilities/utils');
+const utils = require('./helpers/utils');
 
 test('getDataFormat [should] return a string formated as MOUNTH DAY YEAR [when] ISO date is given', (t) => {
     const date = '2009-02-26T13:14:22.000Z'
