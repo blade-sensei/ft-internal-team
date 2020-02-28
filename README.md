@@ -1,5 +1,50 @@
 # Documentation
 
+
+## Demo
+
+Example routes : 
+
+```
+article: /content/id? id is optionnal
+search results: /search?q=donald%20usa&page=2
+```
+
+Article page was builded with simple mocked data (no image), so if you set id in the URL you will always get the same article. See 'Some problems' section of this document to undertand why we mocked the data.
+
+## Stack
+
+- server: nodejs
+- templating engine: mustache
+- test: ava package
+- requests: axios package
+
+## Dev/Debug
+
+- nodemon package restart server after any file change
+- debug with --inspect chrome
+
+## Test 
+
+- Only basic tests for utils.js file using ava
+ 
+ Run command:
+ ```bash
+ npm run test
+ ```
+
+ ## App Structure
+
+I structured the App to get MVC structure
+- controllers: for the routes and manage data
+- models: to the data from thrid party services (FT API)
+- views: mustache templates to render html
+
+Create config file to store API token and server properties, 
+this could be used for DEV env, for production it's better to setup this params in ENV Variables.
+
+
+
 ## Responsive
 
 - Media queries were used to set responsive design.
@@ -14,8 +59,9 @@
 
 Lateral espaces were added beetwen body content and screen extremes, to get a result like this: 
 
-
 ```| <--> | BODY | <-------> |```
+
+Same approch for the Search Form (input) layout.
 
 
 ### CSS code
@@ -135,3 +181,16 @@ Footer stick bottom
 I could not implement this feature. 
 
 I only could see that there are solutions like HTML5 feature and Service workers
+
+## Some problems
+
+- My developer account has not access to /content routes of FT API so i can't get full article information. I mocked the data from a example given in your documentation.
+
+- An article json object has the property 'bodyXML', i could not create paragraphs correctly from that string.
+
+- Footer section is not correctly sticky
+
+## Improvements
+
+This app is a first version many things can be improve, like: search sorting, cover test, create components, refactor controllers etc...
+
