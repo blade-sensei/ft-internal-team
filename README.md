@@ -28,6 +28,8 @@ Article page was builded with simple mocked data (no image), so if you set id in
 ## Test 
 
 - Only basic tests for utils.js file using ava
+
+[ava github repo](https://github.com/avajs/ava)
  
  Run command:
  ```bash
