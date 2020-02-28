@@ -9,6 +9,9 @@
     "start": "node server.js",
     "test": "ava --verbose"
   },
+  "engines": {
+    "node": "10.x"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
