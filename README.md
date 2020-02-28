@@ -183,8 +183,6 @@ I only could see that there are solutions like HTML5 feature and Service workers
 
 - An article json object has the property 'bodyXML', i could not create paragraphs correctly from that string.
 
-- Footer section is not correctly sticky
-
 ## Improvements
 
 This app is a first version many things can be improve, like: search sorting, cover test, create components, refactor controllers etc...
