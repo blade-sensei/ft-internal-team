@@ -23,6 +23,7 @@ Article page was builded with simple mocked data (no image), so if you set id in
 
 - nodemon package restart server after any file change
 - debug with --inspect chrome
+- Inspect chrome
 
 ## Test 
 
@@ -57,7 +58,7 @@ this could be used for DEV env, for production it's better to setup this params 
 
 ### Mobile layout 
 
-Lateral espaces were added beetwen body content and screen extremes, to get a result like this: 
+Lateral spaces were added beetwen body content and screen extremes, to get a result like this: 
 
 ```| <--> | BODY | <-------> |```
 
@@ -83,7 +84,7 @@ Mobile version
 ## Accesibility
 
 - To test our acessibility we use Chrome audit dev tools. This a first way to test.
-- Semantic tags were used and lang attribute lang.
+- Semantic tags were used and lang attribute.
   ```html
   <article>, <header>, <title>
   ```
@@ -104,7 +105,7 @@ Mobile version
 utils.getNumberOfPages(totalArticles, MAX_ARTICLES_BY_PAGE);
 ```
 
-- We bloque pagination for extrems pages, for the page 1 we don't get show PREVIOUS button and in the last page we don't show NEXT button
+- We have bloqued the pagination for extrems pages, for the page 1 we don't get show PREVIOUS button and in the last page we don't show NEXT button
 
 - We use origami the buttons
 
@@ -146,14 +147,6 @@ I will explain my approch/setps of this work.
 - Add FT style with Origami components and inspecting source code to get some CSS rules.
 - Set mobile first to mobile screen
 - Adapt CSS (media queries) to tablets/desktop + screens + viewport
-
-## Performance 3G
-
-## Imp
-
-
-Paragraphs splitted 
-Footer stick bottom
 
 ## Performance low network (3G)
 
