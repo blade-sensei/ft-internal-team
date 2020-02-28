@@ -64,6 +64,21 @@ utils.getNumberOfPages(totalArticles, MAX_ARTICLES_BY_PAGE);
 
 ![pagination](./images/pagination.png)
 
+## Origami
+
+Components used
+
+- o-grid
+- o-typography
+- o-header
+- o-forms
+- o-buttons
+- o-editorial-typography
+- o-footer
+- o-fonts
+- o-teaser-collection
+- o-teaser
+- o-icons
 
 ## Imp
 
