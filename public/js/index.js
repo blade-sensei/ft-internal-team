@@ -27,7 +27,7 @@ function setHandleSearchButton(searchBtn) {
         searchText = removeExtraSpaces(searchText);
         let searchKeyWords = searchText.split(' ');
         searchKeyWords = searchKeyWords.join('+');
-        window.location.href = `http://localhost:3000/search?q=` + searchKeyWords; 
+        window.location.href = `search?q=` + searchKeyWords; 
     })
 }
 

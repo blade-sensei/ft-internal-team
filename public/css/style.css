@@ -10,6 +10,8 @@ body {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 200px;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 footer {
@@ -49,6 +51,7 @@ footer {
 
 .header-search-section {
     display: none;
+    margin: 0 2%;
 }
 
 .brand-logo-img {
