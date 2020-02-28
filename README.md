@@ -80,6 +80,29 @@ Components used
 - o-teaser
 - o-icons
 
+Implemented in header html
+```html
+ <link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid@^5.0.2,
+    o-typography@^6.1.3,o-header@^8.0.2,o-forms@^8.1.13,o-buttons@^6.0.9,o-editorial-typography@^1.0.4,o-footer@^7.0.2,o-fonts@^4.0.2,
+    o-teaser-collection@^3.0.1,o-teaser@^4.0.1,o-icons@^6.0.2" onload="this.media='all'"/>
+```
+
+## Progressive enhancement
+
+To be honest before this task/test i didn't knew about this practice. 
+
+I will explain my approch/setps of this work.
+
+- First i created content page, create routes, basic html/css
+- Again, list search article page with basic html/css
+- Add pagination
+- Add search forms and manage data request to FT API for the search results
+- Add FT style with Origami components and inspecting source code to get some CSS rules.
+- Set mobile first to mobile screen
+- Adapt CSS (media queries) to tablets/desktop + screens + viewport
+
+## Performance 3G
+
 ## Imp
 
 
