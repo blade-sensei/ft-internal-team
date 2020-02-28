@@ -64,7 +64,7 @@ utils.getNumberOfPages(totalArticles, MAX_ARTICLES_BY_PAGE);
 
 ![pagination](./images/pagination.png)
 
-## Origami
+## Origami and FT Style
 
 Components used
 
@@ -109,23 +109,29 @@ I will explain my approch/setps of this work.
 Paragraphs splitted 
 Footer stick bottom
 
+## Performance low network (3G)
 
-## Acces
+- Chrome audit was used to improve the performance for slow network
 
-Semantic - article tag
-time
+### Settings
 
-Add some HTML tags properties - like title and lang see commit:
-`71099397c16be383998cafeb28408eb3288be4c4`
+![settiing](./images/audit-perf-setting.png)
+
+### Results 
+
+![results](./images/audit-perf.png)
 
 
-
-## Performance
-
-Improve load static file 
+- Improve load static file with async loading (onload)
 
 ```html
 <link rel="stylesheet" onload="this.media='all'" />
 ```
 
-Remove some unused files
+- Also remove some unused libraries/files like fontawesome
+
+## Offine
+
+I could not implement this feature. 
+
+I only could see that there are solutions like HTML5 feature and Service workers
